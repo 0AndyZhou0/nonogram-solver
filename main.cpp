@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ostream>
+#include <print>
 #include "solver.cpp"
 
 using namespace NonogramSolver;
@@ -48,7 +49,7 @@ Board example() {
 void display(Board board) {
   for (int r = 0; r < board.get_height(); r++) {
     for (int c = 0; c < board.get_width(); c++) {
-      std::cout << board.get(r, c) << " ";
+      std::print("{:2d} ", board.get(r, c));
     }
     std::cout << std::endl;
   }
