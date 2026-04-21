@@ -1,5 +1,4 @@
-#include <iostream>
-#include <ostream>
+#include <format>
 #include <print>
 #include "solver.cpp"
 
@@ -51,7 +50,7 @@ void display(Board board) {
     for (int c = 0; c < board.get_width(); c++) {
       std::print("{:2d} ", board.get(r, c));
     }
-    std::cout << std::endl;
+    std::print("\n");
   }
 }
 
@@ -62,9 +61,10 @@ int main() {
 
   solve(board);
 
-  std::cout << "------------------------------" << std::endl;
+  for (int i = 0; i < board.get_width(); i++) {
+    std::print("---");
+  }
+  std::print("\n");
 
   display(board);
-
-  return 0;
 }
