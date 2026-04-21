@@ -3,7 +3,6 @@
 #include <cstddef>
 #include <cstdint>
 #include <cstdio>
-#include <iostream>
 #include <numeric>
 #include <stddef.h>
 #include <sys/types.h>
