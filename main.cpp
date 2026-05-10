@@ -5,10 +5,10 @@
 using namespace NonogramSolver;
 
 Board example() {
-  int32_t w = 15;
-  int32_t h = 15;
+  size_t w = 15;
+  size_t h = 15;
 
-  Board board = Board(w, h);
+  Board board = Board{w, h};
 
   board.set_row_restriction(0, {15});
   board.set_row_restriction(1, {5, 4, 1});
