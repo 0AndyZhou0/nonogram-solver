@@ -4,48 +4,48 @@
         {
             "name": "clang++ debug",
             "displayName": "Debug Clang 20.1.8 x86_64-redhat-linux-gnu",
-            "description": "Using compilers: C = /usr/bin/clang, CXX = /usr/bin/clang++",
+            "description": "Using compilers: C = clang, CXX = clang++",
             "binaryDir": "${sourceDir}/out/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "/usr/bin/clang",
-                "CMAKE_CXX_COMPILER": "/usr/bin/clang++",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
                 "CMAKE_BUILD_TYPE": "Debug"
             }
         },
         {
             "name": "clang++ release",
             "displayName": "Release Clang 20.1.8 x86_64-redhat-linux-gnu",
-            "description": "Using compilers: C = /usr/bin/clang, CXX = /usr/bin/clang++",
+            "description": "Using compilers: C = clang, CXX = clang++",
             "binaryDir": "${sourceDir}/out/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "/usr/bin/clang",
-                "CMAKE_CXX_COMPILER": "/usr/bin/clang++",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
                 "CMAKE_BUILD_TYPE": "Release"
             }
         },
         {
             "name": "g++ debug",
             "displayName": "Debug GCC 15.2.1 x86_64-redhat-linux",
-            "description": "Using compilers: C = /usr/bin/gcc, CXX = /usr/bin/g++",
+            "description": "Using compilers: C = gcc, CXX = g++",
             "binaryDir": "${sourceDir}/out/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "/usr/bin/gcc",
-                "CMAKE_CXX_COMPILER": "/usr/bin/g++",
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++",
                 "CMAKE_BUILD_TYPE": "Debug"
             }
         },
         {
             "name": "g++ release",
             "displayName": "Release GCC 15.2.1 x86_64-redhat-linux",
-            "description": "Using compilers: C = /usr/bin/gcc, CXX = /usr/bin/g++",
+            "description": "Using compilers: C = gcc, CXX = g++",
             "binaryDir": "${sourceDir}/out/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-                "CMAKE_C_COMPILER": "/usr/bin/gcc",
-                "CMAKE_CXX_COMPILER": "/usr/bin/g++",
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++",
                 "CMAKE_BUILD_TYPE": "Release"
             }
         }
