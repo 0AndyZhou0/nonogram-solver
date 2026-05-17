@@ -45,26 +45,83 @@ Board example() {
   return board;
 }
 
+Board example2() {
+  size_t w = 15;
+  size_t h = 15;
+
+  Board board = Board{w, h};
+
+  board.set_row_restriction(0, {2, 2});
+  board.set_row_restriction(1, {1, 2});
+  board.set_row_restriction(2, {1, 3});
+  board.set_row_restriction(3, {3});
+  board.set_row_restriction(4, {3, 1});
+  board.set_row_restriction(5, {4, 4});
+  board.set_row_restriction(6, {2, 5});
+  board.set_row_restriction(7, {4, 6});
+  board.set_row_restriction(8, {3, 2, 1});
+  board.set_row_restriction(9, {2, 1, 2});
+  board.set_row_restriction(10, {2, 1, 1, 1});
+  board.set_row_restriction(11, {1, 3, 1});
+  board.set_row_restriction(12, {1, 1});
+  board.set_row_restriction(13, {2, 2});
+  board.set_row_restriction(14, {7});
+
+  board.set_col_restriction(0, {3, 3});
+  board.set_col_restriction(1, {1, 3});
+  board.set_col_restriction(2, {2});
+  board.set_col_restriction(3, {2});
+  board.set_col_restriction(4, {1});
+  board.set_col_restriction(5, {2});
+  board.set_col_restriction(6, {4});
+  board.set_col_restriction(7, {4});
+  board.set_col_restriction(8, {6, 1});
+  board.set_col_restriction(9, {3, 3, 2});
+  board.set_col_restriction(10, {9});
+  board.set_col_restriction(11, {4, 1, 1});
+  board.set_col_restriction(12, {3, 2, 1});
+  board.set_col_restriction(13, {3, 1, 2});
+  board.set_col_restriction(14, {2, 8});
+
+  return board;
+}
+
 void display(Board board) {
-  for (int r = 0; r < board.get_height(); r++) {
-    for (int c = 0; c < board.get_width(); c++) {
+  for (size_t r = 0; r < board.get_height(); r++) {
+    for (size_t c = 0; c < board.get_width(); c++) {
       std::print("{:2d} ", board.get(r, c));
     }
     std::print("\n");
   }
 }
 
-int main() {
-  Board board = example();
-
-  display(board);
+void test_board(Board (*func)()) {
+  Board board = func();
 
   solve(board);
+  
+  display(board);
 
-  for (int i = 0; i < board.get_width(); i++) {
+  for (size_t i = 0; i < board.get_width(); i++) {
     std::print("---");
   }
   std::print("\n");
+}
 
-  display(board);
+int main() {
+  // Board board = example();
+
+  // // display(board);
+
+  // solve(board);
+
+  // for (size_t i = 0; i < board.get_width(); i++) {
+  //   std::print("---");
+  // }
+  // std::print("\n");
+
+  // display(board);
+
+  // test_board(example);
+  test_board(example2);
 }
