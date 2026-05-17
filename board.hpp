@@ -25,11 +25,11 @@ class Board {
         board = std::vector<std::vector<int32_t>>(h, std::vector<int32_t>(w, 0));
       }
 
-      int get_width() {
+      size_t get_width() {
         return width;
       }
 
-      int get_height() {
+      size_t get_height() {
         return height;
       }
 
@@ -110,7 +110,11 @@ class Board {
             count = 0;
           }
         }
-        if (curr >= restrictions.size() || restrictions[curr] != count) {
+        if (count > 0) {
+          if (curr != restrictions.size()-1 || restrictions[curr] != count) {
+            return false;
+          }
+        } else if (curr != restrictions.size()) {
           return false;
         }
         return true;
@@ -133,7 +137,11 @@ class Board {
             count = 0;
           }
         }
-        if (curr >= restrictions.size() || restrictions[curr] != count) {
+        if (count > 0) {
+          if (curr != restrictions.size()-1 || restrictions[curr] != count) {
+            return false;
+          }
+        } else if (curr != restrictions.size()) {
           return false;
         }
         return true;
